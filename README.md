@@ -17,7 +17,7 @@ preset and let it drift, from still and ambient to driving and rhythmic.
 
 ## What is in it
 
-- **86 popular genres in 8 decades**, the 1950s to now: rock & roll and doo-wop, Motown, ska and funk, disco,
+- **100 popular genres in 8 decades** (14 of them Arabic and Maghrebi, see [docs/ARABE.md](docs/ARABE.md)), the 1950s to now: rock & roll and doo-wop, Motown, ska and funk, disco,
   reggae, punk and Bronx block parties, house, techno and new jack swing, grunge, jungle and trance, dubstep and
   grime, trap, drill, amapiano and hyperpop, phonk and Jersey club. Each has its own drum groove and kit, bass line,
   chord loop, comping and instruments; vocal genres play as their beat, bass, chords and a lead line.
