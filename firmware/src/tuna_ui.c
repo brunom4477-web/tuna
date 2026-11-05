@@ -7,6 +7,8 @@
  *   footer 202..240 the period's progress, the piece and its era, the page */
 #include "tuna_ui.h"
 #include "ui_icons.h"
+#include "tuna_genres.inc"
+
 
 #define TU_HEAD 24
 #define TU_CARD_Y 28
