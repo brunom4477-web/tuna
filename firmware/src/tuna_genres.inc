@@ -87,6 +87,20 @@
     TG_STYLE_G_COUNTRY_TRAP,
     TG_STYLE_G_POP_PUNK_REVIVAL,
     TG_STYLE_G_Y2K_POP_REVIVAL,
+    TG_STYLE_G_AR_TARAB,
+    TG_STYLE_G_AR_ATRACHE,
+    TG_STYLE_G_AR_BALADI,
+    TG_STYLE_G_AR_MALFUF,
+    TG_STYLE_G_AR_SAIDI,
+    TG_STYLE_G_AR_SHAABI,
+    TG_STYLE_G_AR_CHAABI_MA,
+    TG_STYLE_G_AR_CHAABI_DZ,
+    TG_STYLE_G_AR_RAI,
+    TG_STYLE_G_AR_RAI_POP,
+    TG_STYLE_G_AR_MEZWED,
+    TG_STYLE_G_AR_POP,
+    TG_STYLE_G_AR_DABKE,
+    TG_STYLE_G_AR_KHALIJI,
 #elif defined(TUNA_GENRE_STYLES)
     [TG_STYLE_G_ROCK_AND_ROLL] = {
         /* Chuck Berry, Little Richard: a twelve-bar blues at full speed, boogie bass, pounding piano eighths, the backbeat */
@@ -113,7 +127,7 @@
         .bass_semis = true,
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .orch = {{TI_PIZZ, TI_SAX, TI_PIANO}, {TI_PIANO, TI_PIANO, TI_SAX}, {TI_PIZZ, TI_DISTGUITAR, TI_PIANO}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 84,
+        .groove = 97,
     },
     [TG_STYLE_G_RHYTHM_AND_BLUES] = {
         /* Fats Domino, Ruth Brown: a triplet shuffle, piano triplets, a walking boogie bass, the sax */
@@ -137,7 +151,7 @@
         .bass_semis = true,
         .pad_rhythm = 0x00FFFFFFu, .pad_gate = 1,
         .orch = {{TI_UPRIGHT, TI_HARMONICA, TI_EGUITAR}, {TI_BASSOON, TI_SAX, TI_TRUMPET}, {TI_UPRIGHT, TI_TRUMPET, TI_SAX}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 85,
+        .groove = 98,
     },
     [TG_STYLE_G_DOO_WOP] = {
         /* the Penguins, the Platters: the I vi IV V of the fifties in a slow 12/8, piano triplets under 'ooh' harmonies, a bass singer walking */
@@ -160,7 +174,7 @@
         .bass_notes = {0, 7, 12, 7}, .bass_len = 4,
         .bass_semis = true,
         .orch = {{TI_TALKBASS, TI_VOICE, TI_PIANO}, {TI_PIZZ, TI_SAX, TI_VOICE}, {TI_TALKBASS, TI_CHOIR, TI_VOICE}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 2,
+        .groove = 15,
     },
     [TG_STYLE_G_ROCKABILLY] = {
         /* Elvis at Sun, Carl Perkins: slapped upright bass on root and fifth, twangy guitar licks, a light shuffle, brushes */
@@ -185,7 +199,7 @@
         .mel_add = 0x008,
         .pad_rhythm = 0x44444444u, .pad_gate = 1,
         .orch = {{TI_PIZZ, TI_EGUITAR, TI_GUITAR}, {TI_PIZZ, TI_EGUITAR, TI_EGUITAR}}, .orch_n = 2, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 83,
+        .groove = 96,
     },
     [TG_STYLE_G_EARLY_SOUL] = {
         /* Ray Charles, Sam Cooke: gospel brought to the dance hall, organ and piano, call and response, the tambourine on the backbeat */
@@ -207,7 +221,7 @@
         .turn = 0.15f,
         .mel_add = 0x408,
         .orch = {{TI_UPRIGHT, TI_VOICE, TI_GOSPEL}, {TI_UPRIGHT, TI_REEDEP, TI_BRASS}, {TI_UPRIGHT, TI_GOSPEL, TI_BRASS}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 86,
+        .groove = 99,
     },
     [TG_STYLE_G_COUNTRY] = {
         /* Hank Williams' honky-tonk, a parent in the background: boom-chick bass and guitar, the fiddle, I IV V */
@@ -230,7 +244,7 @@
         .pad_rhythm = 0x10101010u, .pad_gate = 2,
         .strum_ms = 8,
         .orch = {{TI_PIZZ, TI_VIOLIN, TI_GUITAR}, {TI_PIZZ, TI_BANJO, TI_GUITAR}, {TI_GUITAR, TI_VIOLIN, TI_BANJO}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 1,
+        .groove = 14,
     },
     [TG_STYLE_G_JAZZ_50S] = {
         /* hard bop and cool, the other parent: the ride's swing, a walking bass, ii V I, sparse comping */
@@ -250,7 +264,7 @@
         .mel_add = 0x448,
         .pad_rhythm = 0x00005004u, .pad_gate = 2,
         .orch = {{TI_UPRIGHT, TI_MUTETRUMPET, TI_PIANO}, {TI_UPRIGHT, TI_SAX, TI_VIBES}, {TI_ORGAN, TI_FLUGELHORN, TI_JAZZORGAN}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 82,
+        .groove = 95,
     },
     [TG_STYLE_G_SOUL_60S] = {
         /* Stax and Memphis, Otis Redding, Sam & Dave: a horn section answering, the organ under it, Duck Dunn's bass on the root and octave, Al Jackson's heavy backbeat */
@@ -275,7 +289,7 @@
         .bass_notes = {0, 12, 0, 7}, .bass_len = 4,
         .bass_semis = true,
         .orch = {{TI_EBASS, TI_BRASS, TI_JAZZORGAN}, {TI_EBASS, TI_JAZZORGAN, TI_BRASS}, {TI_EBASS, TI_TRUMPET, TI_GOSPEL}}, .orch_n = 3, .orch_mode = TG_ORCH_CYCLE,
-        .groove = 43,
+        .groove = 56,
     },
     [TG_STYLE_G_MOTOWN] = {
         /* Holland-Dozier-Holland, the Supremes, the Four Tops: the snare and tambourine on every beat, Jamerson's busy melodic bass, piano pounding quarters, I vi ii V */
@@ -300,7 +314,7 @@
         .bass_semis = true,
         .pad_rhythm = 0x11111111u, .pad_gate = 2,
         .orch = {{TI_EBASS, TI_HARMONICA, TI_PIANO}, {TI_EBASS, TI_GLOCKEN, TI_STRINGS}, {TI_EBASS, TI_SAX, TI_STRINGS}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 39,
+        .groove = 52,
     },
     [TG_STYLE_G_SURF_ROCK] = {
         /* Dick Dale, the Ventures, the Chantays: a reverb guitar tremolo-picking down the chord, the Andalusian i VII VI V, pounding floor toms */
@@ -327,7 +341,7 @@
         .pad_rhythm = 0x24492449u, .pad_gate = 1,
         .strum_ms = 4,
         .orch = {{TI_EGUITAR, TI_EGUITAR, TI_EGUITAR}, {TI_EGUITAR, TI_EGUITAR, TI_ROCKORGAN}, {TI_EGUITAR, TI_ROCKORGAN, TI_EGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 44,
+        .groove = 57,
     },
     [TG_STYLE_G_MERSEYBEAT] = {
         /* the early Beatles, the Searchers, Gerry and the Pacemakers: chugging rhythm guitar eighths, a melodic Hofner bass, washy hats, the vi and iii in a major-key pop song */
@@ -351,7 +365,7 @@
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .strum_ms = 5,
         .orch = {{TI_EBASS, TI_EGUITAR, TI_GUITAR}, {TI_EBASS, TI_HARMONICA, TI_EGUITAR}, {TI_EBASS, TI_EGUITAR, TI_REEDEP}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 38,
+        .groove = 51,
     },
     [TG_STYLE_G_FOLK_ROCK] = {
         /* the Byrds, Dylan electric, the Mamas & the Papas: a jangling twelve-string arpeggio, sus chords, the tambourine, close vocal harmony */
@@ -374,7 +388,7 @@
         .bass_semis = true,
         .pad_figure = {0, 1, 2, 3, 4, 3, 2, 1}, .figure_len = 8,
         .orch = {{TI_EBASS, TI_EGUITAR, TI_EGUITAR}, {TI_EBASS, TI_HARMONICA, TI_GUITAR}, {TI_UPRIGHT, TI_DULCIMER, TI_GUITAR}, {TI_EBASS, TI_PANFLUTE, TI_EGUITAR}}, .orch_n = 4, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 35,
+        .groove = 48,
     },
     [TG_STYLE_G_GARAGE_ROCK] = {
         /* the Kingsmen, the Sonics, ? and the Mysterians, Them: three chords (I bVII IV, Gloria), fuzz power chords in the Louie Louie 1-2-3, 1-2, a cheap Farfisa organ hook */
@@ -401,7 +415,7 @@
         .pad_rhythm = 0x05150515u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_DISTGUITAR, TI_ROCKORGAN, TI_DISTGUITAR}, {TI_DISTGUITAR, TI_DISTGUITAR, TI_ROCKORGAN}, {TI_DISTGUITAR, TI_HARMONICA, TI_ROCKORGAN}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 37,
+        .groove = 50,
     },
     [TG_STYLE_G_PSYCHEDELIC] = {
         /* Revolver to the Doors and Hendrix: a Dorian vamp i IV over a droning bass, swirling organ, a long fuzz-guitar line, a hypnotic tom loop */
@@ -429,7 +443,7 @@
         .bass_semis = true,
         .spread = true,
         .orch = {{TI_CELLO, TI_SITAR, TI_STRINGS}, {TI_ORGAN, TI_DISTGUITAR, TI_ROCKORGAN}, {TI_CELLO, TI_FLUTE, TI_HARPSICHORD}}, .orch_n = 3, .orch_mode = TG_ORCH_CYCLE,
-        .groove = 40,
+        .groove = 53,
     },
     [TG_STYLE_G_SKA] = {
         /* the Skatalites, Prince Buster, Millie: the guitar and piano chopping every off-beat, a walking upright bass, a horn section on the melody */
@@ -453,7 +467,7 @@
         .staccato = 0.2f,
         .pad_rhythm = 0x44444444u, .pad_gate = 1,
         .orch = {{TI_PIZZ, TI_TRUMPET, TI_GUITAR}, {TI_PIZZ, TI_BRASS, TI_JAZZORGAN}, {TI_PIZZ, TI_SAX, TI_GUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 42,
+        .groove = 55,
     },
     [TG_STYLE_G_ROCKSTEADY] = {
         /* Alton Ellis, the Paragons, Phyllis Dillon: ska slowed down, the guitar on 2 and 4 only, a heavy melodic bass with gaps, beat three marked, sweet minor-key harmony */
@@ -479,7 +493,7 @@
         .bass_gate = 3,
         .pad_rhythm = 0x10101010u, .pad_gate = 2,
         .orch = {{TI_EBASS, TI_SAX, TI_GUITAR}, {TI_EBASS, TI_REEDORGAN, TI_GUITAR}, {TI_EBASS, TI_TRUMPET, TI_ORGAN}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 41,
+        .groove = 54,
     },
     [TG_STYLE_G_FUNK_60S] = {
         /* James Brown, Cold Sweat and Papa's Got a Brand New Bag: everything on the ONE, a ninth-chord vamp, chicken-scratch guitar sixteenths, horn stabs, a bridge to IV */
@@ -506,7 +520,7 @@
         .bass_gate = 2,
         .pad_rhythm = 0xB4D4D4D4u, .pad_gate = 1,
         .orch = {{TI_SLAPBASS, TI_BRASS, TI_EGUITAR}, {TI_SLAPBASS, TI_TRUMPET, TI_EGUITAR}, {TI_SLAPBASS, TI_JAZZORGAN, TI_BRASS}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 36,
+        .groove = 49,
     },
     [TG_STYLE_G_HARD_ROCK_70S] = {
         /* Led Zeppelin, Deep Purple, AC/DC: a blues-rock riff on distorted power chords, eighth-note bass, a pentatonic guitar solo with blue notes, a heavy backbeat */
@@ -533,7 +547,7 @@
         .pad_rhythm = 0x29492549u, .pad_gate = 2,
         .power = true,
         .orch = {{TI_EBASS, TI_DISTGUITAR, TI_DISTGUITAR}, {TI_EBASS, TI_ROCKORGAN, TI_DISTGUITAR}, {TI_EBASS, TI_HARMONICA, TI_DISTGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 48,
+        .groove = 61,
     },
     [TG_STYLE_G_HEAVY_METAL_70S] = {
         /* Black Sabbath, Judas Priest: Phrygian power chords chugging in eighths with the bass, the flat second, a screaming minor lead, ride and driving kick */
@@ -559,7 +573,7 @@
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_DISTGUITAR, TI_DISTGUITAR, TI_ROCKORGAN}, {TI_DISTGUITAR, TI_TUBULAR, TI_DISTGUITAR}, {TI_EBASS, TI_DISTGUITAR, TI_CHOIR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 49,
+        .groove = 62,
     },
     [TG_STYLE_G_PROG_ROCK_70S] = {
         /* Genesis, Yes, Pink Floyd, ELP: 7/4 riffs, a Moog lead over Mellotron and Hammond chords, modal harmony wandering through Dorian, an arpeggiated bass riff */
@@ -583,7 +597,7 @@
         .bass_notes = {0, 7, 12, 7, 0, 12, 10}, .bass_len = 7,
         .bass_semis = true,
         .orch = {{TI_FATBASS, TI_SAWLEAD, TI_STRMACH}, {TI_BASSOON, TI_FLUTE, TI_HARPSICHORD}, {TI_FATBASS, TI_SYNCLEAD, TI_ROCKORGAN}, {TI_FATBASS, TI_GLOCKEN, TI_STRMACH}}, .orch_n = 4, .orch_mode = TG_ORCH_CONTRAST,
-        .groove = 52,
+        .groove = 65,
     },
     [TG_STYLE_G_GLAM_ROCK] = {
         /* T. Rex, Bowie's Ziggy, Slade, Sweet: a stomping shuffle with handclaps, boogie guitar on the beats, a saxophone or guitar hook, a singalong I-bVII-IV */
@@ -611,7 +625,7 @@
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_EBASS, TI_SAX, TI_EGUITAR}, {TI_CELLO, TI_OBOE, TI_STRINGS}, {TI_EBASS, TI_EGUITAR, TI_ROCKORGAN}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 47,
+        .groove = 60,
     },
     [TG_STYLE_G_ROOTS_REGGAE] = {
         /* Bob Marley and the Wailers, Burning Spear: the one drop on 3, the guitar and organ skank on 2 and 4, a deep melodic bass that leaves holes, a melodica-like lead */
@@ -639,7 +653,7 @@
         .pad_rhythm = 0x10101010u, .pad_gate = 2,
         .strum_ms = 4,
         .orch = {{TI_EBASS, TI_REEDORGAN, TI_ORGAN}, {TI_EBASS, TI_TRUMPET, TI_GUITAR}, {TI_EBASS, TI_SAX, TI_REEDEP}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 51,
+        .groove = 64,
     },
     [TG_STYLE_G_DISCO] = {
         /* Chic, the Bee Gees, Gloria Gaynor: four on the floor, open hats on the offbeats, the octave bass, a choppy guitar on the sixteenths, a string hook, a minor seventh vamp */
@@ -665,7 +679,7 @@
         .bass_gate = 1,
         .pad_rhythm = 0xD4D4D4D4u, .pad_gate = 1,
         .orch = {{TI_SLAPBASS, TI_STRINGS, TI_CLAV}, {TI_SYNTHBASS, TI_SYNCLEAD, TI_STRMACH}, {TI_SLAPBASS, TI_FLUTE, TI_EPIANO}, {TI_SLAPBASS, TI_BRASS, TI_VIBES}}, .orch_n = 4, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 46,
+        .groove = 59,
     },
     [TG_STYLE_G_PUNK_70S] = {
         /* the Ramones, Sex Pistols, the Clash: three chords as fast as possible, downstroked power chords and bass in eighths, a shouted two-note hook */
@@ -691,7 +705,7 @@
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_EBASS, TI_DISTGUITAR, TI_DISTGUITAR}, {TI_EBASS, TI_EGUITAR, TI_DISTGUITAR}, {TI_EBASS, TI_SAX, TI_DISTGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 53,
+        .groove = 66,
     },
     [TG_STYLE_G_SALSA] = {
         /* Fania: Willie Colon, Hector Lavoe, Eddie Palmieri: the 3-2 clave, an anticipated tumbao bass that skips the one, the piano montuno, trombones and trumpets, cowbell and congas */
@@ -715,7 +729,7 @@
         .bass_notes = {0, 2}, .bass_len = 2,
         .pad_figure = {3, -128, 2, 4, -128, 3, -128, 2, 4, -128, 3, -128, 1, 3, -128, 2}, .figure_len = 16,
         .orch = {{TI_FRETLESS, TI_TRUMPET, TI_PIANO}, {TI_FRETLESS, TI_BRASS, TI_PIANO}, {TI_FRETLESS, TI_FLUTE, TI_VIOLIN}, {TI_FRETLESS, TI_VIBES, TI_PIANO}}, .orch_n = 4, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 54,
+        .groove = 67,
     },
     [TG_STYLE_G_OLD_SCHOOL_HIP_HOP] = {
         /* Kool Herc, Grandmaster Flash in the Bronx: the break of a funk record looped on two turntables, a funky drummer beat, a one-chord minor groove, chopped guitar and a horn stab hook cut back and forth */
@@ -742,7 +756,7 @@
         .bass_gate = 2,
         .pad_rhythm = 0xA4252424u, .pad_gate = 1,
         .orch = {{TI_SLAPBASS, TI_BRASS, TI_EGUITAR}, {TI_SLAPBASS, TI_SAX, TI_CLAV}, {TI_SLAPBASS, TI_JAZZORGAN, TI_EGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 45,
+        .groove = 58,
     },
     [TG_STYLE_G_KRAUTROCK] = {
         /* Neu!, Can, Kraftwerk's Autobahn: the motorik beat forever, a hypnotic eighth-note bass on one chord, a sequencer figure, drones that barely change */
@@ -764,7 +778,7 @@
         .pattern = {0, TG_REST, 4, TG_REST, 7, TG_REST, 4, TG_REST, 9, TG_REST, 7, TG_REST, 4, TG_REST, 2, TG_REST}, .pattern_len = 16, .pattern_chord = false,
         .mel_min_ticks = 2,
         .orch = {{TI_FATBASS, TI_RINGMOD, TI_PLUCKSYNTH}, {TI_ORGAN, TI_FLUTE, TI_SINEKEY}, {TI_FATBASS, TI_ARPLEAD, TI_STRMACH}, {TI_WAVEBASS, TI_SYNTH, TI_ROCKORGAN}}, .orch_n = 4, .orch_mode = TG_ORCH_CYCLE,
-        .groove = 50,
+        .groove = 63,
     },
     [TG_STYLE_G_NEW_WAVE_80S] = {
         /* the Cars, Blondie, the Police: tight driving eighths on the bass, choppy off-beat guitar, a bright synth hook over I V vi IV */
@@ -786,7 +800,7 @@
         .staccato = 0.35f,
         .pad_rhythm = 0x44444444u, .pad_gate = 1,
         .orch = {{TI_SYNTHBASS, TI_SYNCLEAD, TI_EGUITAR}, {TI_SYNTHBASS, TI_SYNTH, TI_PLUCKSYNTH}, {TI_SYNTHBASS, TI_ROCKORGAN, TI_EGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 62,
+        .groove = 75,
     },
     [TG_STYLE_G_POST_PUNK_80S] = {
         /* Joy Division, early Cure, Gang of Four: the bass high and melodic as the lead (Peter Hook), the floor-tom beat, stark minor chords stabbed by a thin guitar */
@@ -808,7 +822,7 @@
         .mel_min_ticks = 1,
         .pad_rhythm = 0x40414041u, .pad_gate = 2,
         .orch = {{TI_EBASS, TI_EBASS, TI_EGUITAR}, {TI_EBASS, TI_METALLEAD, TI_EGUITAR}, {TI_EBASS, TI_EGUITAR, TI_STRMACH}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 64,
+        .groove = 77,
     },
     [TG_STYLE_G_SYNTH_POP_80S] = {
         /* Depeche Mode, the Human League, OMD: drum machine, a sequenced octave synth bass, a bright arpeggio and a synth hook, minor i VI III VII */
@@ -833,7 +847,7 @@
         .bass_semis = true,
         .bass_gate = 1,
         .orch = {{TI_SYNTHBASS, TI_SYNTH, TI_ARPLEAD}, {TI_SYNTHBASS, TI_CHIPCHOIR, TI_PLUCKSYNTH}, {TI_FRETLESS, TI_SAWLEAD, TI_SINEKEY}, {TI_WAVEBASS, TI_MARIMBA, TI_PLUCKSYNTH}}, .orch_n = 4, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 65,
+        .groove = 78,
     },
     [TG_STYLE_G_HARDCORE_PUNK_80S] = {
         /* Black Flag, Minor Threat, Dead Kennedys: the skank beat flat out, distorted power chords in eighths, the bass doubling the roots, a chord every two beats */
@@ -856,7 +870,7 @@
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_WAVEBASS, TI_DISTGUITAR, TI_DISTGUITAR}, {TI_EBASS, TI_EGUITAR, TI_DISTGUITAR}}, .orch_n = 2, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 57,
+        .groove = 70,
     },
     [TG_STYLE_G_THRASH_METAL_80S] = {
         /* Metallica, Slayer, Megadeth: palm-muted sixteenth riffs on the low E with Phrygian half-steps, double-kick gallops, power-chord stabs */
@@ -883,7 +897,7 @@
         .pad_rhythm = 0x41010101u, .pad_gate = 2,
         .power = true,
         .orch = {{TI_EBASS, TI_DISTGUITAR, TI_DISTGUITAR}, {TI_EBASS, TI_EBASS, TI_DISTGUITAR}}, .orch_n = 2, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 67,
+        .groove = 80,
     },
     [TG_STYLE_G_GLAM_METAL_80S] = {
         /* Def Leppard, Bon Jovi, Motley Crue: the huge gated snare mid-tempo, chugging power chords, an anthem in major with bVII, a shredding guitar lead */
@@ -906,7 +920,7 @@
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_EBASS, TI_DISTGUITAR, TI_DISTGUITAR}, {TI_EBASS, TI_SYNBRASS, TI_DISTGUITAR}, {TI_EBASS, TI_DISTGUITAR, TI_STRINGS}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 55,
+        .groove = 68,
     },
     [TG_STYLE_G_GOTHIC_ROCK_80S] = {
         /* Sisters of Mercy, Siouxsie, Bauhaus: a machine beat with pounding toms, a deep driving bass, a flanged guitar arpeggio circling the minor chord, choir in the background */
@@ -928,7 +942,7 @@
         .pattern = {0, TG_HOLD, 1, TG_HOLD, 2, TG_HOLD, 3, TG_HOLD, 4, TG_HOLD, 3, TG_HOLD, 2, TG_HOLD, 1, TG_HOLD}, .pattern_len = 16, .pattern_chord = true,
         .mel_min_ticks = 1,
         .orch = {{TI_CELLO, TI_CHOIR, TI_EGUITAR}, {TI_EBASS, TI_EGUITAR, TI_SYNTH}, {TI_FATBASS, TI_SHIMMER, TI_EGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 56,
+        .groove = 69,
     },
     [TG_STYLE_G_ALT_INDIE_80S] = {
         /* R.E.M., the Smiths, the Pixies: a jangling arpeggiated guitar in eighths, a melodic bass, vi IV I V, a tambourine on the backbeat; louder sets bring the distortion */
@@ -952,7 +966,7 @@
         .bass_notes = {0, 0, 2, 3, 0, 0, 2, 1}, .bass_len = 8,
         .pad_figure = {0, 2, 3, 1, 2, 3, 1, 2}, .figure_len = 8,
         .orch = {{TI_EBASS, TI_GUITAR, TI_EGUITAR}, {TI_EBASS, TI_EGUITAR, TI_EGUITAR}, {TI_EBASS, TI_VIOLIN, TI_EGUITAR}, {TI_EBASS, TI_DISTGUITAR, TI_EGUITAR}}, .orch_n = 4, .orch_mode = TG_ORCH_ENERGY,
-        .groove = 60,
+        .groove = 73,
     },
     [TG_STYLE_G_CHICAGO_HOUSE] = {
         /* Frankie Knuckles, Marshall Jefferson, Larry Heard: the 909 four-on-the-floor, a jacking syncopated bass, piano stabs on i7 IV in Dorian, an organ riff */
@@ -979,7 +993,7 @@
         .bass_gate = 2,
         .pad_rhythm = 0x24244424u, .pad_gate = 2,
         .orch = {{TI_SYNTHBASS, TI_VOICE, TI_PIANO}, {TI_ACID, TI_SINEKEY, TI_GOSPEL}, {TI_SYNTHBASS, TI_ARPLEAD, TI_PAD}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 59,
+        .groove = 72,
     },
     [TG_STYLE_G_DETROIT_TECHNO] = {
         /* Juan Atkins, Derrick May, Model 500, Rhythim Is Rhythim: machine funk on the 909, a sequenced synth riff, sweeping strings over minor sevenths, a syncopated sequencer bass */
@@ -1004,7 +1018,7 @@
         .bass_semis = true,
         .bass_gate = 1,
         .orch = {{TI_SYNTHBASS, TI_PIANO, TI_STRINGS}, {TI_SYNTHBASS, TI_RESOSYNTH, TI_STRMACH}, {TI_WAVEBASS, TI_BELLS, TI_SINEKEY}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 66,
+        .groove = 79,
     },
     [TG_STYLE_G_INDUSTRIAL_80S] = {
         /* Front 242, Nitzer Ebb, Skinny Puppy, early Ministry: a distorted machine, the EBM bass sequencing sixteenths around the kick, Phrygian menace, metal hits and noise stabs */
@@ -1031,7 +1045,7 @@
         .pad_rhythm = 0x00410001u, .pad_gate = 2,
         .power = true,
         .orch = {{TI_FATBASS, TI_GLITCH, TI_SYNTH}, {TI_ACID, TI_RINGMOD, TI_SYNTH}, {TI_FATBASS, TI_METALLEAD, TI_SYNBRASS}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 61,
+        .groove = 74,
     },
     [TG_STYLE_G_NEW_JACK_SWING] = {
         /* Teddy Riley, Guy, Bobby Brown, Keith Sweat: hard-swung sixteenths, a slamming snare, a syncopated synth bass, brassy synth stabs, gospel minor sevenths */
@@ -1059,7 +1073,7 @@
         .bass_gate = 2,
         .pad_rhythm = 0x22404240u, .pad_gate = 1,
         .orch = {{TI_SYNTHBASS, TI_SINEKEY, TI_SYNBRASS}, {TI_SLAPBASS, TI_EPIANO, TI_SYNBRASS}, {TI_TALKBASS, TI_SAX, TI_CLAV}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 63,
+        .groove = 76,
     },
     [TG_STYLE_G_GOLDEN_AGE_HIP_HOP] = {
         /* Run-DMC, LL Cool J, Eric B. & Rakim, Public Enemy: the 808 boom under a hard snare, a one-chord loop, horn-stab samples and scratch-like chirps */
@@ -1082,7 +1096,7 @@
         .mel_min_ticks = 1,
         .pad_rhythm = 0x00500400u, .pad_gate = 2,
         .orch = {{TI_808, TI_GLITCH, TI_BRASS}, {TI_808, TI_SAX, TI_EPIANO}, {TI_808, TI_SYNCLEAD, TI_STRMACH}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 58,
+        .groove = 71,
     },
     [TG_STYLE_G_GRUNGE] = {
         /* Nirvana, Soundgarden, Pearl Jam: four power chords in a loop (i iv III VI, Teen Spirit), quiet clean verses against fuzz-wall choruses, a sullen low melody */
@@ -1109,7 +1123,7 @@
         .pad_rhythm = 0x49494949u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_EBASS, TI_EGUITAR, TI_EGUITAR}, {TI_EBASS, TI_DISTGUITAR, TI_DISTGUITAR}, {TI_EBASS, TI_GUITAR, TI_CELLO}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
-        .groove = 75,
+        .groove = 88,
     },
     [TG_STYLE_G_BRITPOP] = {
         /* Oasis, Blur, Pulp: strummed acoustic sevenths and sus chords (Wonderwall's cycle), a Beatles-ish tune, tambourine and a straight mid-tempo beat */
@@ -1136,7 +1150,7 @@
         .pad_rhythm = 0x56515651u, .pad_gate = 2,
         .strum_ms = 9,
         .orch = {{TI_EBASS, TI_EGUITAR, TI_JAZZORGAN}, {TI_EBASS, TI_SITAR, TI_GUITAR}, {TI_EBASS, TI_STRINGS, TI_GUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 68,
+        .groove = 81,
     },
     [TG_STYLE_G_GANGSTA_RAP] = {
         /* N.W.A, Mobb Deep, Wu-Tang: a hard dusty boom-bap break, a deep bass on the kicks, a dark looped two-note piano hook a minor second apart, menace in Phrygian */
@@ -1160,7 +1174,7 @@
         .bass_gate = 6,
         .pad_rhythm = 0x10000001u, .pad_gate = 3,
         .orch = {{TI_808, TI_PIANO, TI_STRINGS}, {TI_808, TI_TUBULAR, TI_PIANO}, {TI_808, TI_VIOLIN, TI_PIANO}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 73,
+        .groove = 86,
     },
     [TG_STYLE_G_G_FUNK] = {
         /* Dr. Dre's The Chronic, Warren G, Snoop: Parliament slowed down, a whining portamento synth lead up high, a fat Moog bass line, Rhodes ninths, the laid-back swing */
@@ -1185,7 +1199,7 @@
         .bass_notes = {0, 12, 10, 7}, .bass_len = 4,
         .bass_semis = true,
         .orch = {{TI_TALKBASS, TI_SAWLEAD, TI_EPIANO}, {TI_SYNTHBASS, TI_SINEKEY, TI_EPIANO}, {TI_SYNTHBASS, TI_TALKBASS, TI_CLAV}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 74,
+        .groove = 87,
     },
     [TG_STYLE_G_RNB_90S] = {
         /* Jodeci, TLC, Aaliyah, Babyface: lush major sevenths and minor ninths on electric piano, a gliding sub bass, a skittering 808 beat, a melismatic lead */
@@ -1208,7 +1222,7 @@
         .turn = 0.3f,
         .mel_add = 0x408,
         .orch = {{TI_808, TI_VOICE, TI_EPIANO}, {TI_FRETLESS, TI_SAX, TI_REEDEP}, {TI_808, TI_SINEKEY, TI_STRINGS}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 79,
+        .groove = 92,
     },
     [TG_STYLE_G_TRIP_HOP] = {
         /* Portishead's Dummy, Massive Attack, Tricky: a slow heavy break, a deep sub, minor ninths and a falling lament, a theremin-like lead, cinematic strings */
@@ -1233,7 +1247,7 @@
         .bass_notes = {0, 0, 7}, .bass_len = 3,
         .bass_semis = true,
         .orch = {{TI_SYNTHBASS, TI_WHISTLE, TI_SINEKEY}, {TI_UPRIGHT, TI_TABLA, TI_STRINGS}, {TI_WAVEBASS, TI_VOICE, TI_HARPSICHORD}, {TI_SYNTHBASS, TI_WHISTLE, TI_RAIN}}, .orch_n = 4, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 81,
+        .groove = 94,
     },
     [TG_STYLE_G_JUNGLE] = {
         /* Goldie, M-Beat, Shy FX: chopped Amen breaks at 165, a booming sub at half speed, ragga skank stabs and a dub-siren melody over a minor vamp */
@@ -1257,7 +1271,7 @@
         .bass_semis = true,
         .pad_rhythm = 0x01000100u, .pad_gate = 2,
         .orch = {{TI_808, TI_SYNCLEAD, TI_ORGAN}, {TI_FATBASS, TI_FLUTE, TI_PAD}, {TI_808, TI_VOICE, TI_STRINGS}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 76,
+        .groove = 89,
     },
     [TG_STYLE_G_DRUM_AND_BASS] = {
         /* Roni Size, Ed Rush & Optical, Bad Company: the clean two-step at 174, a growling detuned reese bass, dark atmospheric pads and a sparse pluck */
@@ -1280,7 +1294,7 @@
         .bass_notes = {0, 0, 1, 0}, .bass_len = 4,
         .bass_semis = true,
         .orch = {{TI_FATBASS, TI_ERHU, TI_SINEKEY}, {TI_UPRIGHT, TI_FLUGELHORN, TI_EPIANO}, {TI_FATBASS, TI_SHIMMER, TI_SINEKEY}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 70,
+        .groove = 83,
     },
     [TG_STYLE_G_TRANCE_90S] = {
         /* Paul van Dyk, Robert Miles, ATB, Ferry Corsten: 138 four on the floor, the rolling off-beat bass, sixteenth arpeggios over i VI III VII, supersaw chords, long builds */
@@ -1307,7 +1321,7 @@
         .bass_gate = 2,
         .spread = true,
         .orch = {{TI_WAVEBASS, TI_PLUCKSYNTH, TI_STRMACH}, {TI_ACID, TI_ARPLEAD, TI_SYNTH}, {TI_WAVEBASS, TI_SUPERSAW, TI_SUPERSAW}}, .orch_n = 3, .orch_mode = TG_ORCH_ENERGY,
-        .groove = 80,
+        .groove = 93,
     },
     [TG_STYLE_G_EURODANCE] = {
         /* 2 Unlimited, Haddaway, Culture Beat, Corona: four on the floor at 130, the octave-jumping bass, house-piano stabs, a big minor synth hook */
@@ -1333,7 +1347,7 @@
         .bass_gate = 1,
         .pad_rhythm = 0x24492449u, .pad_gate = 2,
         .orch = {{TI_ORGAN, TI_SYNCLEAD, TI_PIANO}, {TI_WAVEBASS, TI_VOICE, TI_PLUCKSYNTH}, {TI_SYNTHBASS, TI_SAWLEAD, TI_PIANO}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 72,
+        .groove = 85,
     },
     [TG_STYLE_G_NU_METAL] = {
         /* Korn, Limp Bizkit, Deftones: drop-tuned chugs on the low string and the flat second, a hip-hop-bounce beat, eerie sparse lead notes and scratches */
@@ -1360,7 +1374,7 @@
         .pad_rhythm = 0x14450A45u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_EBASS, TI_DISTGUITAR, TI_DISTGUITAR}, {TI_SLAPBASS, TI_METALLEAD, TI_DISTGUITAR}, {TI_EBASS, TI_GLITCH, TI_DISTGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 77,
+        .groove = 90,
     },
     [TG_STYLE_G_POP_PUNK_90S] = {
         /* Green Day's Dookie, the Offspring, Blink-182: downpicked power-chord eighths on I V vi IV at full speed, a driving eighth bass, a catchy major tune */
@@ -1382,7 +1396,7 @@
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_EBASS, TI_DISTGUITAR, TI_DISTGUITAR}, {TI_EBASS, TI_EGUITAR, TI_DISTGUITAR}}, .orch_n = 2, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 78,
+        .groove = 91,
     },
     [TG_STYLE_G_MIDWEST_EMO] = {
         /* American Football, Cap'n Jazz, Mineral: 5/4, twinkly clean guitars tapping open major sevenths and add9s, a second guitar's wandering line, a busy jazzy kit */
@@ -1405,7 +1419,7 @@
         .bass_notes = {0, 0, 2, 1}, .bass_len = 4,
         .pad_figure = {0, 2, 4, 3, 1, 3, 5, 4, 2, 4}, .figure_len = 10,
         .orch = {{TI_EBASS, TI_EGUITAR, TI_EGUITAR}, {TI_EBASS, TI_TRUMPET, TI_EGUITAR}, {TI_EBASS, TI_GUITAR, TI_EGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 71,
+        .groove = 84,
     },
     [TG_STYLE_G_REGGAETON_90S] = {
         /* DJ Playero, El General, Tego's beginnings: the dembow riddim from Jamaica via Panama and Puerto Rico, a deep bass on the three-three-two, synth stabs and a minor hook */
@@ -1431,7 +1445,7 @@
         .bass_gate = 2,
         .pad_rhythm = 0x48484848u, .pad_gate = 1,
         .orch = {{TI_808, TI_SYNCLEAD, TI_PLUCKSYNTH}, {TI_WAVEBASS, TI_STEELDRUM, TI_GUITAR}, {TI_808, TI_SAWLEAD, TI_MARIMBA}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 69,
+        .groove = 82,
     },
     [TG_STYLE_G_CRUNK] = {
         /* Lil Jon, Ying Yang Twins: a booming 808, claps stacked on 2 and 4, a shrill synth riff hammered on one Phrygian chord */
@@ -1453,7 +1467,7 @@
         .mel_min_ticks = 2,
         .pad_rhythm = 0x05410441u, .pad_gate = 2,
         .orch = {{TI_808, TI_SYNCLEAD, TI_SYNTH}, {TI_808, TI_SAWLEAD, TI_SYNBRASS}, {TI_FATBASS, TI_SYNCLEAD, TI_SYNBRASS}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 3,
+        .groove = 16,
     },
     [TG_STYLE_G_SNAP_MUSIC] = {
         /* D4L's Laffy Taffy, Dem Franchize Boyz: finger snaps on 2 and 4, an almost empty 808, a toy-like bleep riff */
@@ -1475,7 +1489,7 @@
         .pattern = {4, TG_REST, TG_REST, TG_REST, TG_REST, TG_REST, 4, TG_REST, 2, TG_REST, TG_REST, TG_REST, 0, TG_REST, TG_REST, TG_REST}, .pattern_len = 16, .pattern_chord = false,
         .mel_min_ticks = 2,
         .orch = {{TI_808, TI_SINEKEY, TI_SINEKEY}, {TI_808, TI_WHISTLE, TI_SINEKEY}, {TI_808, TI_TOYPIANO, TI_SINEKEY}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 11,
+        .groove = 24,
     },
     [TG_STYLE_G_EMO_POP] = {
         /* Jimmy Eat World, Fall Out Boy, Paramore: wall of power-chord eighths, vi IV I V, a soaring sing-along hook, punk drums with crash */
@@ -1502,7 +1516,7 @@
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_EBASS, TI_EGUITAR, TI_DISTGUITAR}, {TI_EBASS, TI_VIOLIN, TI_DISTGUITAR}, {TI_EBASS, TI_SYNTH, TI_DISTGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_CYCLE,
-        .groove = 6,
+        .groove = 19,
     },
     [TG_STYLE_G_GARAGE_ROCK_REVIVAL] = {
         /* the Strokes, the White Stripes, Yeah Yeah Yeahs: a fuzzy minor blues riff, clipped guitar chops, trashy open hats, bass in eighths */
@@ -1529,7 +1543,7 @@
         .pad_rhythm = 0x54445444u, .pad_gate = 1,
         .strum_ms = 6,
         .orch = {{TI_EBASS, TI_EGUITAR, TI_DISTGUITAR}, {TI_DISTGUITAR, TI_DISTGUITAR, TI_EGUITAR}, {TI_EBASS, TI_ROCKORGAN, TI_DISTGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 7,
+        .groove = 20,
     },
     [TG_STYLE_G_DUBSTEP_UK] = {
         /* Skream, Benga, Digital Mystikz: 140 half-time, kick on one, snare on three, a wobbling reese under a sub, eerie stabs and space */
@@ -1554,7 +1568,7 @@
         .bass_semis = true,
         .pad_rhythm = 0x01000100u, .pad_gate = 3,
         .orch = {{TI_FATBASS, TI_SINEKEY, TI_WHISPER}, {TI_FATBASS, TI_RINGMOD, TI_GLITCH}, {TI_FATBASS, TI_GLASS, TI_SINEKEY}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 4,
+        .groove = 17,
     },
     [TG_STYLE_G_GRIME] = {
         /* Wiley's eskibeat, Dizzee Rascal: 140, cold square-wave riffs, a buzzing square bass, broken kicks, pizzicato and string stabs */
@@ -1580,7 +1594,7 @@
         .bass_gate = 2,
         .pad_rhythm = 0x04410041u, .pad_gate = 1,
         .orch = {{TI_WAVEBASS, TI_CHIP, TI_PIZZ}, {TI_WAVEBASS, TI_STEPLEAD, TI_STRINGS}, {TI_SYNTHBASS, TI_WAVELEAD, TI_BELLS}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 8,
+        .groove = 21,
     },
     [TG_STYLE_G_ELECTROCLASH] = {
         /* Felix da Housecat, Fischerspooner, Miss Kittin: dirty 808 four-on-the-floor, octave synth bass, cold sawtooth riff, sleazy stabs */
@@ -1606,7 +1620,7 @@
         .bass_gate = 1,
         .pad_rhythm = 0x24492449u, .pad_gate = 2,
         .orch = {{TI_SYNTHBASS, TI_SAWLEAD, TI_SYNTH}, {TI_ACID, TI_RESOSYNTH, TI_SINEKEY}, {TI_SYNTHBASS, TI_SYNCLEAD, TI_RESOSYNTH}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 5,
+        .groove = 18,
     },
     [TG_STYLE_G_INDIE_POP_00S] = {
         /* the Shins, Feist, the Postal Service: jangly strummed guitar, tambourine in eighths, a glockenspiel melody, bright major chords */
@@ -1630,7 +1644,7 @@
         .pad_rhythm = 0x45454545u, .pad_gate = 2,
         .strum_ms = 12,
         .orch = {{TI_SYNTHBASS, TI_GLOCKEN, TI_ARPLEAD}, {TI_CELLO, TI_FLUGELHORN, TI_GUITAR}, {TI_WAVEBASS, TI_CELESTA, TI_GUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 9,
+        .groove = 22,
     },
     [TG_STYLE_G_POP_RAP] = {
         /* Nelly's Hot in Herre, the Black Eyed Peas: hip hop's swung beat under a pop hook, a funky Dorian vamp, piano stabs, a bouncing synth bass */
@@ -1656,7 +1670,7 @@
         .bass_gate = 2,
         .pad_rhythm = 0x14244424u, .pad_gate = 1,
         .orch = {{TI_SYNTHBASS, TI_SITAR, TI_STRINGS}, {TI_SYNTHBASS, TI_CLAV, TI_SINEKEY}, {TI_WAVEBASS, TI_TABLA, TI_PIZZ}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 10,
+        .groove = 23,
     },
     [TG_STYLE_G_EDM_BIG_ROOM] = {
         /* Swedish House Mafia, Martin Garrix's Animals, Hardwell: 128 on the floor, the off-beat bass, a snare build into a supersaw drop, a stabbing lead hook */
@@ -1684,7 +1698,7 @@
         .bass_gate = 2,
         .pad_rhythm = 0x54492449u, .pad_gate = 2,
         .orch = {{TI_WAVEBASS, TI_PLUCKSYNTH, TI_SUPERSAW}, {TI_SYNTHBASS, TI_SAWLEAD, TI_SUPERSAW}, {TI_FATBASS, TI_SYNBRASS, TI_SUPERSAW}, {TI_FATBASS, TI_METALLEAD, TI_SUPERSAW}}, .orch_n = 4, .orch_mode = TG_ORCH_ENERGY,
-        .groove = 14,
+        .groove = 27,
     },
     [TG_STYLE_G_TRAP_2010S] = {
         /* Metro Boomin, Mike Will, Migos and Future: a booming 808 on the kick sliding between notes, the half-time snare, hats rolling, a dark bell loop */
@@ -1708,7 +1722,7 @@
         .bass_notes = {0, 0, 12, 0, 7, 0}, .bass_len = 6,
         .bass_semis = true,
         .orch = {{TI_808, TI_BELLS, TI_PIANO}, {TI_808, TI_HORN, TI_STRINGS}, {TI_808, TI_RINGMOD, TI_SINEKEY}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 22,
+        .groove = 35,
     },
     [TG_STYLE_G_SOUNDCLOUD_RAP] = {
         /* Lil Uzi Vert, Playboi Carti's Magnolia, Lil Yachty, Future's Mask Off: bouncy fast trap, a looping flute or toy-synth riff, lighter, dreamier chords */
@@ -1732,7 +1746,7 @@
         .bass_semis = true,
         .bass_gate = 6,
         .orch = {{TI_808, TI_WAVELEAD, TI_EGUITAR}, {TI_808, TI_MUSICBOX, TI_GUITAR}, {TI_808, TI_CHIP, TI_SINEKEY}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 21,
+        .groove = 34,
     },
     [TG_STYLE_G_CHICAGO_DRILL] = {
         /* Chief Keef and Young Chop (I Don't Like, Love Sosa): menacing harmonic-minor strings and bells, stabbing brass, hard 808s punched on the grid, triplet hat rolls */
@@ -1759,7 +1773,7 @@
         .bass_gate = 5,
         .pad_rhythm = 0x14410441u, .pad_gate = 2,
         .orch = {{TI_808, TI_SYNBRASS, TI_PIZZ}, {TI_808, TI_GLOCKEN, TI_PIZZ}, {TI_808, TI_STRINGS, TI_TUBULAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 15,
+        .groove = 28,
     },
     [TG_STYLE_G_UK_DRILL] = {
         /* 67, Headie One, Digga D, the producers M1OnTheBeat and Ghosty: 140 half-time, skippy hats in threes, the 808 gliding up and down the octave, a dark minor piano and choir */
@@ -1784,7 +1798,7 @@
         .bass_notes = {0, 12, 0, 10, 0, 3, 13, 0}, .bass_len = 8,
         .bass_semis = true,
         .orch = {{TI_808, TI_VIOLIN, TI_SINEKEY}, {TI_808, TI_PANFLUTE, TI_PIANO}, {TI_808, TI_PIANO, TI_STRINGS}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 23,
+        .groove = 36,
     },
     [TG_STYLE_G_LOFI_HIP_HOP] = {
         /* Nujabes and J Dilla's heirs, the lo-fi beats to study to stream: swung dusty drums, a mellow Rhodes on jazz sevenths and ninths, a soft upright, a lazy keys or flute line */
@@ -1811,7 +1825,7 @@
         .bass_notes = {0, 7}, .bass_len = 2,
         .bass_semis = true,
         .orch = {{TI_UPRIGHT, TI_FLUGELHORN, TI_EPIANO}, {TI_FRETLESS, TI_VIBES, TI_REEDEP}, {TI_UPRIGHT, TI_KALIMBA, TI_EGUITAR}, {TI_EBASS, TI_SHAKUHACHI, TI_RAIN}}, .orch_n = 4, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 19,
+        .groove = 32,
     },
     [TG_STYLE_G_VAPORWAVE] = {
         /* Macintosh Plus' Floral Shoppe, Saint Pepsi: 80s smooth jazz and mall muzak slowed down and chopped, a DX7 piano stuttering on lush major sevenths, a lonely sax in a loop */
@@ -1838,7 +1852,7 @@
         .bass_semis = true,
         .pad_rhythm = 0x50151415u, .pad_gate = 2,
         .orch = {{TI_FRETLESS, TI_SAX, TI_EPIANO}, {TI_SLAPBASS, TI_MARIMBA, TI_SYNBRASS}, {TI_WAVEBASS, TI_SINEKEY, TI_FROZEN}, {TI_FRETLESS, TI_SINEKEY, TI_RAIN}}, .orch_n = 4, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 24,
+        .groove = 37,
     },
     [TG_STYLE_G_AFROBEATS] = {
         /* Wizkid, Davido, Burna Boy: a mid-tempo Lagos groove, rim clave and shaker, a bouncing bass, highlife guitar picking and a bright synth or flute hook */
@@ -1864,7 +1878,7 @@
         .bass_gate = 2,
         .pad_rhythm = 0x94A4A4A4u, .pad_gate = 1,
         .orch = {{TI_EBASS, TI_EGUITAR, TI_MARIMBA}, {TI_WAVEBASS, TI_KALIMBA, TI_GUITAR}, {TI_LOGDRUM, TI_SAX, TI_PLUCKSYNTH}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 12,
+        .groove = 25,
     },
     [TG_STYLE_G_AMAPIANO] = {
         /* Kabza De Small, DJ Maphorisa, the Pretoria and Joburg townships: the log drum bassline gliding under a soft 112 house beat, rolling shakers, jazzy minor-ninth piano chords */
@@ -1889,7 +1903,7 @@
         .bass_gate = 3,
         .pad_rhythm = 0x51044504u, .pad_gate = 3,
         .orch = {{TI_LOGDRUM, TI_SAX, TI_PIANO}, {TI_LOGDRUM, TI_FLUTE, TI_EPIANO}, {TI_LOGDRUM, TI_WHISTLE, TI_JAZZORGAN}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 13,
+        .groove = 26,
     },
     [TG_STYLE_G_KPOP_2010S] = {
         /* BTS, BLACKPINK, EXO, TWICE (the Teddy and SM sound): bright, sharp synths and a pumping bass, the song changing gear between sections, a hook made to be danced to */
@@ -1916,7 +1930,7 @@
         .bass_gate = 1,
         .pad_rhythm = 0x14495049u, .pad_gate = 2,
         .orch = {{TI_SYNTHBASS, TI_SYNCLEAD, TI_PLUCKSYNTH}, {TI_FATBASS, TI_SAWLEAD, TI_SUPERSAW}, {TI_SLAPBASS, TI_BRASS, TI_CLAV}, {TI_EBASS, TI_WHISTLE, TI_STRINGS}}, .orch_n = 4, .orch_mode = TG_ORCH_CONTRAST,
-        .groove = 17,
+        .groove = 30,
     },
     [TG_STYLE_G_HYPERPOP] = {
         /* 100 gecs, SOPHIE, Charli XCX and the PC Music crowd: everything pitched up and blown out, glitching arpeggios, a distorted 808, sugary major chords at 160 */
@@ -1942,7 +1956,7 @@
         .bass_semis = true,
         .pad_rhythm = 0x554D4D4Du, .pad_gate = 1,
         .orch = {{TI_SYNTHBASS, TI_GLITCH, TI_SUPERSAW}, {TI_WAVEBASS, TI_CHIP, TI_DISTGUITAR}, {TI_FATBASS, TI_RINGMOD, TI_CHIPCHOIR}, {TI_SYNTHBASS, TI_STEPLEAD, TI_SUPERSAW}}, .orch_n = 4, .orch_mode = TG_ORCH_CYCLE,
-        .groove = 16,
+        .groove = 29,
     },
     [TG_STYLE_G_REGGAETON_2010S] = {
         /* Despacito, J Balvin, Ozuna, Maluma: the dembow under a glossy minor pop loop (i VI III VII), a sub bass on the beat, cuatro-like plucked guitar and a synth hook */
@@ -1969,7 +1983,7 @@
         .bass_gate = 2,
         .pad_rhythm = 0x44444444u, .pad_gate = 1,
         .orch = {{TI_SYNTHBASS, TI_GUITAR, TI_PLUCKSYNTH}, {TI_WAVEBASS, TI_SYNCLEAD, TI_MARIMBA}, {TI_SYNTHBASS, TI_ACCORDION, TI_STEELDRUM}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 20,
+        .groove = 33,
     },
     [TG_STYLE_G_LATIN_TRAP] = {
         /* Bad Bunny, Anuel AA, Ozuna on trap: half-time trap drums with the dembow ghosting on the rim, a sliding 808, a Spanish-tinged minor guitar or piano riff */
@@ -1994,7 +2008,7 @@
         .pad_rhythm = 0x41010101u, .pad_gate = 3,
         .strum_ms = 10,
         .orch = {{TI_808, TI_GUITAR, TI_PAD}, {TI_808, TI_CELLO, TI_CHOIR}, {TI_808, TI_VIOLIN, TI_GUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 18,
+        .groove = 31,
     },
     [TG_STYLE_G_DRIFT_PHONK] = {
         /* Kordhell, DVRST, Kaito Shoma: Memphis phonk made for drifting: a cowbell riff in sixteenths over a distorted 808, Phrygian gloom, the clap on 2 and 4 */
@@ -2015,7 +2029,7 @@
         .pattern = {0, TG_REST, 7, TG_REST, 0, 7, TG_REST, 5, TG_REST, 4, TG_REST, 2, 1, TG_REST, 0, TG_REST}, .pattern_len = 16, .pattern_chord = false,
         .mel_min_ticks = 2,
         .orch = {{TI_808, TI_RINGMOD, TI_SYNTH}, {TI_FATBASS, TI_BELLS, TI_STRMACH}, {TI_808, TI_METALLEAD, TI_RINGMOD}}, .orch_n = 3, .orch_mode = TG_ORCH_CYCLE,
-        .groove = 29,
+        .groove = 42,
     },
     [TG_STYLE_G_BROOKLYN_DRILL] = {
         /* Pop Smoke, Fivio Foreign, 808Melo: UK drill brought to New York, faster, the 808 sliding up and down an octave, a dark harmonic-minor piano and strings, a vocal-like lead */
@@ -2038,7 +2052,7 @@
         .bass_notes = {0, 12, 0, 10, 0, 12, 7, 3}, .bass_len = 8,
         .bass_semis = true,
         .orch = {{TI_808, TI_CHOIR, TI_STRINGS}, {TI_808, TI_BELLS, TI_CELLO}, {TI_808, TI_VOICE, TI_SINEKEY}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 26,
+        .groove = 39,
     },
     [TG_STYLE_G_RAGE_RAP] = {
         /* Playboi Carti's Whole Lotta Red, Trippie Redd's Miss the Rage, Ken Carson: a blaring supersaw riff looping over 808s and a distorted kick, at 160 */
@@ -2059,7 +2073,7 @@
         .pattern = {3, TG_HOLD, 2, TG_HOLD, 3, TG_HOLD, 4, TG_HOLD, 3, TG_HOLD, 2, TG_HOLD, 1, TG_HOLD, 2, TG_HOLD}, .pattern_len = 16, .pattern_chord = true,
         .mel_min_ticks = 2,
         .orch = {{TI_808, TI_SUPERSAW, TI_SYNTH}, {TI_FATBASS, TI_ARPLEAD, TI_SYNTH}, {TI_808, TI_SAWLEAD, TI_SYNTH}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 31,
+        .groove = 44,
     },
     [TG_STYLE_G_JERSEY_CLUB] = {
         /* the 2020s Jersey club wave (Lil Uzi Vert's Just Wanna Rock, Ice Spice, Bandmanrill): the kick in fives, the bed-squeak on the off-beats, a chopped vocal hook at 140 */
@@ -2082,7 +2096,7 @@
         .bass_gate = 3,
         .pad_rhythm = 0x10411041u, .pad_gate = 2,
         .orch = {{TI_SYNTHBASS, TI_VOICE, TI_RESOSYNTH}, {TI_FATBASS, TI_SYNCLEAD, TI_PLUCKSYNTH}, {TI_SYNTHBASS, TI_STEPLEAD, TI_VOICE}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 28,
+        .groove = 41,
     },
     [TG_STYLE_G_SPED_UP] = {
         /* TikTok's sped-up edits: a pop song pitched up and played fast, the chipmunk vocal hook bright and high, I V vi IV */
@@ -2106,7 +2120,7 @@
         .bass_gate = 3,
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .orch = {{TI_WAVEBASS, TI_VOICE, TI_PLUCKSYNTH}, {TI_EBASS, TI_GLOCKEN, TI_SUPERSAW}, {TI_WAVEBASS, TI_WHISTLE, TI_SINEKEY}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 33,
+        .groove = 46,
     },
     [TG_STYLE_G_SLOWED_REVERB] = {
         /* the slowed + reverb edits of YouTube and TikTok: a song pulled down to a crawl, lower, washed in reverb, dreamy major sevenths, the 808 booming */
@@ -2129,7 +2143,7 @@
         .mel_min_ticks = 4,
         .spread = true,
         .orch = {{TI_FRETLESS, TI_SHIMMER, TI_SINEKEY}, {TI_FRETLESS, TI_FROZEN, TI_EPIANO}, {TI_FRETLESS, TI_MUSICBOX, TI_STRMACH}, {TI_FRETLESS, TI_SHIMMER, TI_WIND}}, .orch_n = 4, .orch_mode = TG_ORCH_CYCLE,
-        .groove = 32,
+        .groove = 45,
     },
     [TG_STYLE_G_BEDROOM_POP] = {
         /* Clairo, beabadoobee, Rex Orange County, Steve Lacy: home-made pop, a jangly strummed guitar, major sevenths, a soft bass and a cheap drum machine */
@@ -2155,7 +2169,7 @@
         .pad_rhythm = 0x49494949u, .pad_gate = 2,
         .strum_ms = 12,
         .orch = {{TI_EBASS, TI_EGUITAR, TI_REEDORGAN}, {TI_EBASS, TI_TOYPIANO, TI_EGUITAR}, {TI_EBASS, TI_SYNTH, TI_REEDEP}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 25,
+        .groove = 38,
     },
     [TG_STYLE_G_COUNTRY_TRAP] = {
         /* Lil Nas X's Old Town Road to Morgan Wallen and Jelly Roll: a banjo roll and a twangy guitar over trap drums and an 808 */
@@ -2176,7 +2190,7 @@
         .mel_min_ticks = 2,
         .pad_figure = {0, -128, 1, -128, 3, -128, 0, -128, 2, -128, 4, -128, 1, -128, 3, -128}, .figure_len = 16,
         .orch = {{TI_808, TI_BANJO, TI_GUITAR}, {TI_808, TI_EGUITAR, TI_BANJO}, {TI_808, TI_HARMONICA, TI_GUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 27,
+        .groove = 40,
     },
     [TG_STYLE_G_POP_PUNK_REVIVAL] = {
         /* Machine Gun Kelly's Tickets to My Downfall, Olivia Rodrigo's good 4 u, Travis Barker's drums: pop punk power chords and bass eighths with trap hat rolls */
@@ -2198,7 +2212,7 @@
         .pad_rhythm = 0x55555555u, .pad_gate = 1,
         .power = true,
         .orch = {{TI_EBASS, TI_EGUITAR, TI_DISTGUITAR}, {TI_EBASS, TI_SYNTH, TI_DISTGUITAR}, {TI_EBASS, TI_SYNCLEAD, TI_DISTGUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 30,
+        .groove = 43,
     },
     [TG_STYLE_G_Y2K_POP_REVIVAL] = {
         /* PinkPantheress, NewJeans, Charli XCX: the glossy pop of 2000 revisited, a 2-step skip, bright plucked arpeggios, a breathy hook over major sevenths */
@@ -2222,10 +2236,348 @@
         .bass_notes = {0, 0, 3, 2}, .bass_len = 4,
         .bass_gate = 3,
         .orch = {{TI_SYNTHBASS, TI_WHISPER, TI_PLUCKSYNTH}, {TI_FATBASS, TI_CHIPCHOIR, TI_EPIANO}, {TI_WAVEBASS, TI_CELESTA, TI_ARPLEAD}}, .orch_n = 3, .orch_mode = TG_ORCH_RANDOM,
-        .groove = 34,
+        .groove = 47,
+    },
+    [TG_STYLE_G_AR_TARAB] = {
+        /* Cairo's orchestras of the tarab (Umm Kulthum, Abdel Halim, Farid el Atrache's films): nahawand (harmonic minor) under strings, oud and accordion; slow, rubato, a swelling line, the maqsum underneath */
+        .name = "TARAB CAIRE", .root = 2, .scale = TS_HARM_MINOR,
+        .bpm = 88, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.5f, .melody_base = 62, .melody_range = 15,
+        .profile = {0.15f, 0.6f, 0.85f, 0.95f}, .max_leap = 4,
+        .syncopation = 0.2f, .appoggiatura = 0.2f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_BLOCK, .pad_base = 53, .pad_tones = 4,
+        .fifth_bias = 1.0f, .repeat = 0.5f, .swell = 0.4f, .sforzando = 0.0f, .rubato = 0.35f,
+        .motif = 0.75f, .motif_beats = 2, .motif_use = 0.7f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_CLASSIC, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 3, 6, 0, 1, 3, 7, 0}, .cycle_len = 8,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.15f,
+        .bass_rhythm = 0x4101u,
+        .orch = {{TI_CELLO, TI_VIOLIN, TI_STRINGS}, {TI_UPRIGHT, TI_OUD, TI_STRINGS}, {TI_CELLO, TI_ACCORDION, TI_HARP}, {TI_CONTRABASS, TI_VIOLIN, TI_OUD}}, .orch_n = 4, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 13,
+    },
+    [TG_STYLE_G_AR_ATRACHE] = {
+        /* In the manner of Farid el Atrache: the oud's long phrases and a descending line over a minor loop (bayati, played as aeolian), the Andalusian fall i-VII-VI-V, then iv and back, strings and harp */
+        .name = "EL ATRACHE", .root = 2, .scale = TS_AEOLIAN,
+        .bpm = 96, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.55f, .melody_base = 60, .melody_range = 17,
+        .profile = {0.15f, 0.62f, 0.85f, 0.95f}, .max_leap = 5,
+        .syncopation = 0.25f, .appoggiatura = 0.25f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_BROKEN, .pad_base = 55, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.5f, .swell = 0.3f, .sforzando = 0.0f, .rubato = 0.25f,
+        .motif = 0.7f, .motif_beats = 2, .motif_use = 0.7f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_CLASSIC, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 12, 1, 7, 0, 3, 6, 0}, .cycle_len = 8,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .direction = -0.1f,
+        .turn = 0.2f,
+        .bass_rhythm = 0x0141u,
+        .orch = {{TI_CELLO, TI_OUD, TI_STRINGS}, {TI_UPRIGHT, TI_VIOLIN, TI_HARP}, {TI_CELLO, TI_OUD, TI_ACCORDION}}, .orch_n = 3, .orch_mode = TG_ORCH_CYCLE,
+        .groove = 13,
+    },
+    [TG_STYLE_G_AR_BALADI] = {
+        /* Egyptian baladi: the folk beat of the street, an accordion line over a drone-like loop, i and bVII answering each other */
+        .name = "BALADI", .root = 2, .scale = TS_DORIAN,
+        .bpm = 104, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.6f, .melody_base = 62, .melody_range = 14,
+        .profile = {0.15f, 0.65f, 0.86f, 0.95f}, .max_leap = 3,
+        .syncopation = 0.3f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_RHYTHM, .pad_base = 55, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.6f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.85f, .motif_beats = 2, .motif_use = 0.8f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_MODAL, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 0, 13, 0}, .cycle_len = 4,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.2f,
+        .bass_rhythm = 0x0105u,
+        .pad_rhythm = 0x02410904u, .pad_gate = 1,
+        .orch = {{TI_UPRIGHT, TI_ACCORDION, TI_ORGAN}, {TI_EBASS, TI_ACCORDION, TI_OUD}, {TI_UPRIGHT, TI_OBOE, TI_ACCORDION}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 1,
+    },
+    [TG_STYLE_G_AR_MALFUF] = {
+        /* Malfuf in 2/4, the fast cabaret and belly-dance beat: hijaz (phrygian dominant), the minor second answered by the tonic, a quick line of eighths with an oud and an accordion */
+        .name = "MALFUF", .root = 2, .scale = TS_PHRYG_DOM,
+        .bpm = 132, .division = 4, .beats_per_bar = 2, .chord_beats = 2, .period_bars = 8,
+        .melody_density = 0.7f, .melody_base = 62, .melody_range = 14,
+        .profile = {0.15f, 0.65f, 0.85f, 0.95f}, .max_leap = 3,
+        .syncopation = 0.2f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_AFTERBEAT, .pad_base = 55, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.5f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.8f, .motif_beats = 2, .motif_use = 0.7f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_CLASSIC, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 23, 0, 6}, .cycle_len = 4,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.25f,
+        .bass_rhythm = 0x0011u,
+        .orch = {{TI_UPRIGHT, TI_OUD, TI_ACCORDION}, {TI_EBASS, TI_VIOLIN, TI_ORGAN}, {TI_UPRIGHT, TI_ACCORDION, TI_STRINGS}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 6,
+    },
+    [TG_STYLE_G_AR_SAIDI] = {
+        /* Saidi, Upper Egypt: the stick dance and a reed (mizmar) line over a dorian i-IV, hard and repeating */
+        .name = "SAIDI", .root = 2, .scale = TS_DORIAN,
+        .bpm = 112, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.6f, .melody_base = 62, .melody_range = 12,
+        .profile = {0.2f, 0.7f, 0.9f, 0.97f}, .max_leap = 3,
+        .syncopation = 0.25f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_BLOCK, .pad_base = 53, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.7f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.9f, .motif_beats = 2, .motif_use = 0.85f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_POP, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 0, 15, 0}, .cycle_len = 4,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.3f,
+        .bass_rhythm = 0x0141u,
+        .orch = {{TI_UPRIGHT, TI_ENGLISHHORN, TI_ACCORDION}, {TI_EBASS, TI_OBOE, TI_ORGAN}, {TI_CONTRABASS, TI_OBOE, TI_OUD}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 11,
+    },
+    [TG_STYLE_G_AR_SHAABI] = {
+        /* Shaabi, Cairo's street pop (Ahmed Adaweyya, Hakim, Sha'ban): organ and synth over a hard maqsum, handclaps, a harmonic-minor i-iv-V loop */
+        .name = "SHAABI", .root = 4, .scale = TS_HARM_MINOR,
+        .bpm = 118, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.65f, .melody_base = 64, .melody_range = 13,
+        .profile = {0.15f, 0.62f, 0.84f, 0.95f}, .max_leap = 3,
+        .syncopation = 0.3f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_AFTERBEAT, .pad_base = 55, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.5f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.85f, .motif_beats = 2, .motif_use = 0.7f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_CLASSIC, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 3, 6, 0}, .cycle_len = 4,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.25f,
+        .bass_rhythm = 0x5151u,
+        .orch = {{TI_EBASS, TI_ROCKORGAN, TI_ACCORDION}, {TI_SYNTHBASS, TI_SYNCLEAD, TI_ORGAN}, {TI_EBASS, TI_ACCORDION, TI_STRMACH}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 12,
+    },
+    [TG_STYLE_G_AR_CHAABI_MA] = {
+        /* Moroccan chaabi (Nass el Ghiwane, Najat Aatabou, the Andalusian-Gnawa street) in 6/8: banjo and oud over the Andalusian fall Am-G-F-E */
+        .name = "CHAABI MAROC", .root = 9, .scale = TS_AEOLIAN,
+        .bpm = 116, .division = 2, .beats_per_bar = 6, .chord_beats = 6, .period_bars = 8,
+        .melody_density = 0.6f, .melody_base = 60, .melody_range = 13,
+        .profile = {0.2f, 0.68f, 0.88f, 0.96f}, .max_leap = 3,
+        .syncopation = 0.2f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_TREMOLO, .pad_base = 57, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.6f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.85f, .motif_beats = 3, .motif_use = 0.7f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_POP, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 8, 2, 6}, .cycle_len = 4,
+        .mel_mode = TG_MEL_PHRASE,
+        .turn = 0.25f,
+        .bass_rhythm = 0x0041u,
+        .orch = {{TI_UPRIGHT, TI_BANJO, TI_OUD}, {TI_EBASS, TI_OUD, TI_ACCORDION}, {TI_UPRIGHT, TI_VIOLIN, TI_BANJO}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 2,
+    },
+    [TG_STYLE_G_AR_CHAABI_DZ] = {
+        /* Algiers chaabi (El Anka, Dahmane El Harrachi): mandole tremolo and violin, the loop i-iv-V and VII-VI-V, a patient 4/4 */
+        .name = "CHAABI ALGER", .root = 9, .scale = TS_HARM_MINOR,
+        .bpm = 100, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.55f, .melody_base = 60, .melody_range = 15,
+        .profile = {0.15f, 0.62f, 0.85f, 0.95f}, .max_leap = 4,
+        .syncopation = 0.2f, .appoggiatura = 0.2f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_TREMOLO, .pad_base = 57, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.55f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.15f,
+        .motif = 0.75f, .motif_beats = 2, .motif_use = 0.7f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_CLASSIC, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 3, 6, 0, 12, 1, 7, 0}, .cycle_len = 8,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.2f,
+        .bass_rhythm = 0x0141u,
+        .orch = {{TI_UPRIGHT, TI_VIOLIN, TI_BANJO}, {TI_CELLO, TI_OUD, TI_ACCORDION}, {TI_UPRIGHT, TI_VIOLIN, TI_OUD}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 3,
+    },
+    [TG_STYLE_G_AR_RAI] = {
+        /* Rai of Oran (Cheb Khaled, Cheb Mami's start, Chaba Fadela): drum machine and synth, an accordion and a trumpet, a minor drone loop i-VII-VI-VII on the phrygian scale (kurd's colour) */
+        .name = "RAI", .root = 9, .scale = TS_PHRYGIAN,
+        .bpm = 108, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.65f, .melody_base = 62, .melody_range = 13,
+        .profile = {0.15f, 0.65f, 0.86f, 0.95f}, .max_leap = 3,
+        .syncopation = 0.35f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_AFTERBEAT, .pad_base = 55, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.7f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.9f, .motif_beats = 2, .motif_use = 0.85f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_POP, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 8, 2, 8}, .cycle_len = 4,
+        .open = 0.15f,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.3f,
+        .bass_rhythm = 0x0249u,
+        .orch = {{TI_SYNTHBASS, TI_ACCORDION, TI_SYNTH}, {TI_EBASS, TI_TRUMPET, TI_STRMACH}, {TI_SYNTHBASS, TI_OUD, TI_ACCORDION}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 9,
+    },
+    [TG_STYLE_G_AR_RAI_POP] = {
+        /* Pop-rai of the 1990s (Khaled, Faudel, Cheb Mami): a clean beat, guitar and strings, the pop minor loop i-VI-III-VII under a sung line */
+        .name = "RAI POP", .root = 9, .scale = TS_AEOLIAN,
+        .bpm = 112, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.6f, .melody_base = 64, .melody_range = 13,
+        .profile = {0.15f, 0.62f, 0.86f, 0.95f}, .max_leap = 4,
+        .syncopation = 0.3f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_ARPEGGIO, .pad_base = 55, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.6f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.85f, .motif_beats = 2, .motif_use = 0.7f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_POP, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 2, 9, 8}, .cycle_len = 4,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.2f,
+        .bass_rhythm = 0x0249u,
+        .orch = {{TI_EBASS, TI_ACCORDION, TI_STRINGS}, {TI_SLAPBASS, TI_OUD, TI_EPIANO}, {TI_EBASS, TI_VOICE, TI_GUITAR}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 10,
+    },
+    [TG_STYLE_G_AR_MEZWED] = {
+        /* Tunisian mezwed: the bagpipe's loud reed line over a drone, a fast darbuka and bendir, hijaz (phrygian dominant) on a pedal with the minor second as a push */
+        .name = "MEZWED", .root = 4, .scale = TS_PHRYG_DOM,
+        .bpm = 116, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.75f, .melody_base = 64, .melody_range = 12,
+        .profile = {0.2f, 0.72f, 0.9f, 0.97f}, .max_leap = 3,
+        .syncopation = 0.3f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_PEDAL, .pad_mode = TG_PAD_BLOCK, .pad_base = 52, .pad_tones = 2,
+        .fifth_bias = 1.0f, .repeat = 0.8f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.9f, .motif_beats = 2, .motif_use = 0.9f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_CLASSIC, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 0, 23, 0}, .cycle_len = 4,
+        .open = 0.1f,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.35f,
+        .bass_rhythm = 0x1111u,
+        .power = true,
+        .orch = {{TI_EBASS, TI_ENGLISHHORN, TI_ACCORDION}, {TI_UPRIGHT, TI_OBOE, TI_DRONE}, {TI_EBASS, TI_ENGLISHHORN, TI_ORGAN}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 7,
+    },
+    [TG_STYLE_G_AR_POP] = {
+        /* Egyptian and Lebanese pop (Amr Diab, Nancy Ajram, Cheb Khaled's crossovers): nahawand under guitar and synth, the loop i-iv-VII-III, a bright clean maqsum */
+        .name = "POP ARABE", .root = 2, .scale = TS_HARM_MINOR,
+        .bpm = 104, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.6f, .melody_base = 64, .melody_range = 13,
+        .profile = {0.15f, 0.62f, 0.86f, 0.95f}, .max_leap = 4,
+        .syncopation = 0.3f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_ARPEGGIO, .pad_base = 57, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.55f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.8f, .motif_beats = 2, .motif_use = 0.7f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_POP, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 4, 8, 9}, .cycle_len = 4,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.2f,
+        .bass_rhythm = 0x4141u,
+        .orch = {{TI_EBASS, TI_EGUITAR, TI_STRMACH}, {TI_SYNTHBASS, TI_OUD, TI_EPIANO}, {TI_EBASS, TI_ACCORDION, TI_STRINGS}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 8,
+    },
+    [TG_STYLE_G_AR_DABKE] = {
+        /* Dabke of the Levant (Lebanon, Syria, Palestine): a stamping beat for the line dance, a mijwiz-like reed and an accordion over i-V in harmonic minor */
+        .name = "DABKE", .root = 2, .scale = TS_HARM_MINOR,
+        .bpm = 128, .division = 4, .beats_per_bar = 4, .chord_beats = 4, .period_bars = 8,
+        .melody_density = 0.75f, .melody_base = 64, .melody_range = 12,
+        .profile = {0.2f, 0.7f, 0.9f, 0.97f}, .max_leap = 3,
+        .syncopation = 0.25f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_AFTERBEAT, .pad_base = 55, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.7f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.9f, .motif_beats = 2, .motif_use = 0.9f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_CLASSIC, .harmony = TG_HARM_CYCLE,
+        .cycle = {0, 0, 6, 0}, .cycle_len = 4,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.35f,
+        .bass_rhythm = 0x1111u,
+        .orch = {{TI_EBASS, TI_OBOE, TI_ACCORDION}, {TI_SYNTHBASS, TI_CLARINET, TI_ORGAN}, {TI_EBASS, TI_OUD, TI_STRMACH}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 4,
+    },
+    [TG_STYLE_G_AR_KHALIJI] = {
+        /* Khaliji, the Gulf's pop (Kuwait, Emirates, Saudi): a light 2/4, oud and strings over a mixolydian I-bVII-I-IV (rast, as the 12-tone scale has it) */
+        .name = "KHALIJI", .root = 0, .scale = TS_MIXOLYDIAN,
+        .bpm = 104, .division = 4, .beats_per_bar = 2, .chord_beats = 2, .period_bars = 8,
+        .melody_density = 0.6f, .melody_base = 64, .melody_range = 13,
+        .profile = {0.15f, 0.62f, 0.86f, 0.95f}, .max_leap = 4,
+        .syncopation = 0.25f, .appoggiatura = 0.0f, .suspension = 0.0f, .chromatic = false, .trill = false, .arrival_bars = 1,
+        .bass_mode = TG_BASS_ROOT, .pad_mode = TG_PAD_BLOCK, .pad_base = 55, .pad_tones = 3,
+        .fifth_bias = 1.0f, .repeat = 0.55f, .swell = 0.0f, .sforzando = 0.0f, .rubato = 0.0f,
+        .motif = 0.8f, .motif_beats = 2, .motif_use = 0.7f, .var_invert = 0.1f, .var_alter = 0.3f,
+        .perc_mode = TG_PERC_GROOVE,
+        .w_major = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .w_minor = {10, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .vocab = TG_VOC_MODAL, .harmony = TG_HARM_CYCLE,
+        .cycle = {9, 13, 9, 12}, .cycle_len = 4,
+        .mel_mode = TG_MEL_PHRASE,
+        .mel_min_ticks = 2,
+        .turn = 0.2f,
+        .bass_rhythm = 0x0009u,
+        .orch = {{TI_EBASS, TI_OUD, TI_STRINGS}, {TI_SYNTHBASS, TI_OUD, TI_STRMACH}, {TI_UPRIGHT, TI_VIOLIN, TI_OUD}}, .orch_n = 3, .orch_mode = TG_ORCH_CONTRAST,
+        .groove = 5,
     },
 #elif defined(TUNA_GENRE_GROOVES)
-static const tg_groove grooves[86] = {
+static const tg_groove grooves[99] = {
+    {"ARAB_BALADI", 32, 0, 1, 56, 54, 60, 60, 0, 0, 1,
+     {{36, 100, 0x01050105u, 0x00010001u, 0x00000000u}, {37, 90, 0x10401040u, 0x00000000u, 0x00000000u}, {63, 58, 0x14901490u, 0x00000000u, 0x14901490u}, {54, 56, 0x55555555u, 0x00000000u, 0x00000000u}, {39, 64, 0x10101010u, 0x00000000u, 0x00000000u}}},
+    {"ARAB_CHAABI68", 24, 0, 1, 58, 56, 58, 62, 0, 0, 1,
+     {{36, 100, 0x00041041u, 0x00001001u, 0x00000000u}, {37, 90, 0x00414414u, 0x00000000u, 0x00000000u}, {63, 56, 0x000A20A0u, 0x00000000u, 0x000A20A0u}, {54, 54, 0x00B6DB6Du, 0x00000000u, 0x00000000u}}},
+    {"ARAB_CHAABIDZ", 32, 0, 1, 56, 54, 60, 56, 0, 0, 1,
+     {{36, 98, 0x01410141u, 0x00010001u, 0x00000000u}, {37, 88, 0x10041004u, 0x00000000u, 0x00000000u}, {63, 54, 0x24922492u, 0x00000000u, 0x24922492u}, {54, 52, 0x55555555u, 0x00000000u, 0x00000000u}}},
+    {"ARAB_DABKE", 32, 0, 1, 60, 58, 52, 84, 0, 0, 1,
+     {{36, 108, 0x11111111u, 0x01010101u, 0x00000000u}, {37, 92, 0x44444444u, 0x00000000u, 0x00000000u}, {39, 84, 0x10101010u, 0x00000000u, 0x00000000u}, {54, 62, 0x55555555u, 0x00000000u, 0x00000000u}}},
+    {"ARAB_KHALIJI", 16, 0, 1, 58, 56, 56, 68, 0, 0, 1,
+     {{36, 98, 0x00000909u, 0x00000101u, 0x00000000u}, {37, 86, 0x00004040u, 0x00000000u, 0x00000000u}, {39, 66, 0x00000904u, 0x00000000u, 0x00000000u}, {54, 56, 0x00005555u, 0x00000000u, 0x00000000u}}},
+    {"ARAB_MALFUF", 16, 0, 1, 60, 58, 54, 70, 0, 0, 1,
+     {{36, 100, 0x00000101u, 0x00000001u, 0x00000000u}, {37, 92, 0x00004848u, 0x00000000u, 0x00000000u}, {63, 56, 0x0000AAAAu, 0x00000000u, 0x0000AAAAu}, {54, 62, 0x00005555u, 0x00000000u, 0x00000000u}}},
+    {"ARAB_MEZWED", 32, 0, 1, 58, 58, 56, 72, 0, 0, 1,
+     {{36, 104, 0x01410141u, 0x00010001u, 0x00000000u}, {37, 94, 0x50145014u, 0x00000000u, 0x00000000u}, {45, 70, 0x01010101u, 0x00000000u, 0x00000000u}, {63, 58, 0x88888888u, 0x00000000u, 0x88888888u}, {54, 62, 0x55555555u, 0x00000000u, 0x00000000u}}},
+    {"ARAB_POP", 32, 0, 0, 62, 60, 50, 86, 0, 0, 1,
+     {{36, 106, 0x01010101u, 0x00010001u, 0x00000000u}, {37, 86, 0x10441044u, 0x00000000u, 0x00000000u}, {39, 74, 0x10101010u, 0x00000000u, 0x00000000u}, {42, 58, 0x55555555u, 0x00000000u, 0x00000000u}}},
+    {"ARAB_RAI", 32, 4, 0, 60, 64, 54, 84, 0, 0, 1,
+     {{36, 106, 0x02490249u, 0x00010001u, 0x00000000u}, {37, 92, 0x50405040u, 0x00000000u, 0x00000000u}, {39, 70, 0x10101010u, 0x00000000u, 0x00000000u}, {42, 56, 0x55555555u, 0x00000000u, 0x00000000u}, {63, 52, 0x49244924u, 0x00000000u, 0x49244924u}}},
+    {"ARAB_RAIPOP", 32, 0, 0, 62, 60, 52, 82, 0, 0, 1,
+     {{36, 104, 0x02490249u, 0x00010001u, 0x00000000u}, {38, 88, 0x10101010u, 0x00000000u, 0x00000000u}, {37, 80, 0x50405040u, 0x00000000u, 0x00000000u}, {70, 54, 0xFFFFFFFFu, 0x00000000u, 0x00000000u}, {63, 50, 0x49244924u, 0x00000000u, 0x49244924u}}},
+    {"ARAB_SAIDI", 32, 0, 1, 52, 52, 64, 74, 0, 0, 1,
+     {{36, 106, 0x01410141u, 0x00010001u, 0x00000000u}, {37, 94, 0x04040404u, 0x00000000u, 0x00000000u}, {41, 70, 0x14001400u, 0x00000000u, 0x14001400u}, {54, 56, 0x55555555u, 0x00000000u, 0x00000000u}}},
+    {"ARAB_SHAABI", 32, 0, 0, 60, 60, 56, 84, 0, 0, 1,
+     {{36, 108, 0x05010501u, 0x00010001u, 0x00000000u}, {37, 92, 0x10441044u, 0x00000000u, 0x00000000u}, {39, 86, 0x10101010u, 0x00000000u, 0x00000000u}, {70, 58, 0xFFFFFFFFu, 0x00000000u, 0x00000000u}}},
+    {"ARAB_TARAB", 32, 0, 1, 58, 56, 62, 50, 0, 0, 0,
+     {{36, 92, 0x01010101u, 0x00010001u, 0x00000000u}, {37, 78, 0x10441044u, 0x00000000u, 0x00000000u}, {63, 54, 0x14101410u, 0x00000000u, 0x14101410u}, {54, 50, 0x55555555u, 0x00000000u, 0x00000000u}}},
     {"BOOMCHICK", 32, 0, 1, 62, 48, 45, 40, 0, 0, 0,
      {{36, 84, 0x01010101u, 0x00000000u, 0x00000000u}, {38, 80, 0x10101010u, 0x00000000u, 0x00000000u}, {42, 56, 0x44444444u, 0x00000000u, 0x00000000u}}},
     {"DOOWOP", 24, 0, 1, 60, 50, 50, 64, 0, 0, 0,
@@ -2400,18 +2752,18 @@ static const tg_groove grooves[86] = {
      {{36, 96, 0x01410141u, 0x00000000u, 0x00000000u}, {38, 94, 0x10101010u, 0x10101010u, 0x00000000u}, {54, 70, 0x10101010u, 0x00000000u, 0x00000000u}, {42, 66, 0x55555555u, 0x00000000u, 0x00000000u}}},
 };
 #elif defined(TUNA_GENRE_ERAS)
-static const tp_composer era_1950[] = {{TG_STYLE_G_COUNTRY, 1949}, {TG_STYLE_G_RHYTHM_AND_BLUES, 1949}, {TG_STYLE_G_DOO_WOP, 1954}, {TG_STYLE_G_EARLY_SOUL, 1954}, {TG_STYLE_G_ROCK_AND_ROLL, 1954}, {TG_STYLE_G_JAZZ_50S, 1955}, {TG_STYLE_G_ROCKABILLY, 1955}};
-#define ERA_1950_N 7
-static const tp_composer era_1960[] = {{TG_STYLE_G_SKA, 1961}, {TG_STYLE_G_SURF_ROCK, 1961}, {TG_STYLE_G_SOUL_60S, 1962}, {TG_STYLE_G_MERSEYBEAT, 1963}, {TG_STYLE_G_MOTOWN, 1963}, {TG_STYLE_G_FOLK_ROCK, 1965}, {TG_STYLE_G_GARAGE_ROCK, 1965}, {TG_STYLE_G_PSYCHEDELIC, 1966}, {TG_STYLE_G_ROCKSTEADY, 1966}, {TG_STYLE_G_FUNK_60S, 1967}};
-#define ERA_1960_N 10
-static const tp_composer era_1970[] = {{TG_STYLE_G_HARD_ROCK_70S, 1969}, {TG_STYLE_G_HEAVY_METAL_70S, 1970}, {TG_STYLE_G_GLAM_ROCK, 1971}, {TG_STYLE_G_KRAUTROCK, 1971}, {TG_STYLE_G_PROG_ROCK_70S, 1971}, {TG_STYLE_G_SALSA, 1971}, {TG_STYLE_G_ROOTS_REGGAE, 1972}, {TG_STYLE_G_OLD_SCHOOL_HIP_HOP, 1973}, {TG_STYLE_G_DISCO, 1974}, {TG_STYLE_G_PUNK_70S, 1976}};
-#define ERA_1970_N 10
-static const tp_composer era_1980[] = {{TG_STYLE_G_NEW_WAVE_80S, 1978}, {TG_STYLE_G_POST_PUNK_80S, 1978}, {TG_STYLE_G_SYNTH_POP_80S, 1980}, {TG_STYLE_G_GOTHIC_ROCK_80S, 1981}, {TG_STYLE_G_HARDCORE_PUNK_80S, 1981}, {TG_STYLE_G_ALT_INDIE_80S, 1983}, {TG_STYLE_G_GLAM_METAL_80S, 1983}, {TG_STYLE_G_THRASH_METAL_80S, 1983}, {TG_STYLE_G_INDUSTRIAL_80S, 1984}, {TG_STYLE_G_CHICAGO_HOUSE, 1985}, {TG_STYLE_G_GOLDEN_AGE_HIP_HOP, 1986}, {TG_STYLE_G_DETROIT_TECHNO, 1987}, {TG_STYLE_G_NEW_JACK_SWING, 1987}};
-#define ERA_1980_N 13
-static const tp_composer era_1990[] = {{TG_STYLE_G_GANGSTA_RAP, 1988}, {TG_STYLE_G_GRUNGE, 1991}, {TG_STYLE_G_EURODANCE, 1992}, {TG_STYLE_G_G_FUNK, 1992}, {TG_STYLE_G_RNB_90S, 1992}, {TG_STYLE_G_JUNGLE, 1993}, {TG_STYLE_G_TRANCE_90S, 1993}, {TG_STYLE_G_BRITPOP, 1994}, {TG_STYLE_G_MIDWEST_EMO, 1994}, {TG_STYLE_G_POP_PUNK_90S, 1994}, {TG_STYLE_G_REGGAETON_90S, 1994}, {TG_STYLE_G_TRIP_HOP, 1994}, {TG_STYLE_G_DRUM_AND_BASS, 1996}, {TG_STYLE_G_NU_METAL, 1997}};
-#define ERA_1990_N 14
-static const tp_composer era_2000[] = {{TG_STYLE_G_ELECTROCLASH, 2001}, {TG_STYLE_G_GARAGE_ROCK_REVIVAL, 2001}, {TG_STYLE_G_EMO_POP, 2002}, {TG_STYLE_G_POP_RAP, 2002}, {TG_STYLE_G_CRUNK, 2003}, {TG_STYLE_G_GRIME, 2003}, {TG_STYLE_G_INDIE_POP_00S, 2004}, {TG_STYLE_G_DUBSTEP_UK, 2005}, {TG_STYLE_G_SNAP_MUSIC, 2005}};
-#define ERA_2000_N 9
+static const tp_composer era_1950[] = {{TG_STYLE_G_COUNTRY, 1949}, {TG_STYLE_G_RHYTHM_AND_BLUES, 1949}, {TG_STYLE_G_AR_TARAB, 1953}, {TG_STYLE_G_DOO_WOP, 1954}, {TG_STYLE_G_EARLY_SOUL, 1954}, {TG_STYLE_G_ROCK_AND_ROLL, 1954}, {TG_STYLE_G_AR_ATRACHE, 1955}, {TG_STYLE_G_JAZZ_50S, 1955}, {TG_STYLE_G_ROCKABILLY, 1955}};
+#define ERA_1950_N 9
+static const tp_composer era_1960[] = {{TG_STYLE_G_AR_BALADI, 1960}, {TG_STYLE_G_SKA, 1961}, {TG_STYLE_G_SURF_ROCK, 1961}, {TG_STYLE_G_AR_SAIDI, 1962}, {TG_STYLE_G_SOUL_60S, 1962}, {TG_STYLE_G_MERSEYBEAT, 1963}, {TG_STYLE_G_MOTOWN, 1963}, {TG_STYLE_G_AR_MALFUF, 1965}, {TG_STYLE_G_FOLK_ROCK, 1965}, {TG_STYLE_G_GARAGE_ROCK, 1965}, {TG_STYLE_G_PSYCHEDELIC, 1966}, {TG_STYLE_G_ROCKSTEADY, 1966}, {TG_STYLE_G_FUNK_60S, 1967}};
+#define ERA_1960_N 13
+static const tp_composer era_1970[] = {{TG_STYLE_G_AR_CHAABI_DZ, 1966}, {TG_STYLE_G_HARD_ROCK_70S, 1969}, {TG_STYLE_G_HEAVY_METAL_70S, 1970}, {TG_STYLE_G_GLAM_ROCK, 1971}, {TG_STYLE_G_KRAUTROCK, 1971}, {TG_STYLE_G_PROG_ROCK_70S, 1971}, {TG_STYLE_G_SALSA, 1971}, {TG_STYLE_G_AR_SHAABI, 1972}, {TG_STYLE_G_ROOTS_REGGAE, 1972}, {TG_STYLE_G_OLD_SCHOOL_HIP_HOP, 1973}, {TG_STYLE_G_AR_CHAABI_MA, 1974}, {TG_STYLE_G_DISCO, 1974}, {TG_STYLE_G_PUNK_70S, 1976}};
+#define ERA_1970_N 13
+static const tp_composer era_1980[] = {{TG_STYLE_G_NEW_WAVE_80S, 1978}, {TG_STYLE_G_POST_PUNK_80S, 1978}, {TG_STYLE_G_SYNTH_POP_80S, 1980}, {TG_STYLE_G_GOTHIC_ROCK_80S, 1981}, {TG_STYLE_G_HARDCORE_PUNK_80S, 1981}, {TG_STYLE_G_AR_RAI, 1982}, {TG_STYLE_G_ALT_INDIE_80S, 1983}, {TG_STYLE_G_GLAM_METAL_80S, 1983}, {TG_STYLE_G_THRASH_METAL_80S, 1983}, {TG_STYLE_G_INDUSTRIAL_80S, 1984}, {TG_STYLE_G_CHICAGO_HOUSE, 1985}, {TG_STYLE_G_GOLDEN_AGE_HIP_HOP, 1986}, {TG_STYLE_G_DETROIT_TECHNO, 1987}, {TG_STYLE_G_NEW_JACK_SWING, 1987}};
+#define ERA_1980_N 14
+static const tp_composer era_1990[] = {{TG_STYLE_G_GANGSTA_RAP, 1988}, {TG_STYLE_G_AR_MEZWED, 1990}, {TG_STYLE_G_GRUNGE, 1991}, {TG_STYLE_G_AR_RAI_POP, 1992}, {TG_STYLE_G_EURODANCE, 1992}, {TG_STYLE_G_G_FUNK, 1992}, {TG_STYLE_G_RNB_90S, 1992}, {TG_STYLE_G_JUNGLE, 1993}, {TG_STYLE_G_TRANCE_90S, 1993}, {TG_STYLE_G_BRITPOP, 1994}, {TG_STYLE_G_MIDWEST_EMO, 1994}, {TG_STYLE_G_POP_PUNK_90S, 1994}, {TG_STYLE_G_REGGAETON_90S, 1994}, {TG_STYLE_G_TRIP_HOP, 1994}, {TG_STYLE_G_AR_POP, 1996}, {TG_STYLE_G_DRUM_AND_BASS, 1996}, {TG_STYLE_G_NU_METAL, 1997}};
+#define ERA_1990_N 17
+static const tp_composer era_2000[] = {{TG_STYLE_G_AR_DABKE, 2000}, {TG_STYLE_G_ELECTROCLASH, 2001}, {TG_STYLE_G_GARAGE_ROCK_REVIVAL, 2001}, {TG_STYLE_G_AR_KHALIJI, 2002}, {TG_STYLE_G_EMO_POP, 2002}, {TG_STYLE_G_POP_RAP, 2002}, {TG_STYLE_G_CRUNK, 2003}, {TG_STYLE_G_GRIME, 2003}, {TG_STYLE_G_INDIE_POP_00S, 2004}, {TG_STYLE_G_DUBSTEP_UK, 2005}, {TG_STYLE_G_SNAP_MUSIC, 2005}};
+#define ERA_2000_N 11
 static const tp_composer era_2010[] = {{TG_STYLE_G_VAPORWAVE, 2011}, {TG_STYLE_G_AFROBEATS, 2012}, {TG_STYLE_G_CHICAGO_DRILL, 2012}, {TG_STYLE_G_EDM_BIG_ROOM, 2012}, {TG_STYLE_G_KPOP_2010S, 2012}, {TG_STYLE_G_TRAP_2010S, 2012}, {TG_STYLE_G_LOFI_HIP_HOP, 2015}, {TG_STYLE_G_AMAPIANO, 2016}, {TG_STYLE_G_LATIN_TRAP, 2016}, {TG_STYLE_G_SOUNDCLOUD_RAP, 2016}, {TG_STYLE_G_UK_DRILL, 2016}, {TG_STYLE_G_REGGAETON_2010S, 2017}, {TG_STYLE_G_HYPERPOP, 2019}};
 #define ERA_2010_N 13
 static const tp_composer era_2020[] = {{TG_STYLE_G_BEDROOM_POP, 2020}, {TG_STYLE_G_BROOKLYN_DRILL, 2020}, {TG_STYLE_G_DRIFT_PHONK, 2020}, {TG_STYLE_G_RAGE_RAP, 2020}, {TG_STYLE_G_SLOWED_REVERB, 2020}, {TG_STYLE_G_COUNTRY_TRAP, 2021}, {TG_STYLE_G_POP_PUNK_REVIVAL, 2021}, {TG_STYLE_G_SPED_UP, 2021}, {TG_STYLE_G_JERSEY_CLUB, 2022}, {TG_STYLE_G_Y2K_POP_REVIVAL, 2022}};
